@@ -1,0 +1,21 @@
+# Internal instructions
+agent.md
+AGENTS.md
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Generated temporary files
+tmp/
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
