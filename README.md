@@ -13,6 +13,13 @@ Kho lưu trữ các bài thực hành môn **Học máy ứng dụng**. Nội du
 | Khóa | Khóa 30 |
 | Năm học | Sinh viên năm 3 |
 
+## Thông tin giảng viên
+
+- **Học vị:** Thạc sĩ ngành Khoa học Dữ liệu và Trí tuệ Nhân tạo (Data Science & Artificial Intelligence).
+- **Đơn vị công tác:** Giảng viên Khoa Công nghệ Thông tin, Trường Đại học Văn Lang.
+- **Lĩnh vực quan tâm và nghiên cứu:** Khoa học dữ liệu, trí tuệ nhân tạo và học máy.
+- **GitHub:** [AnhNguyenVLU](https://github.com/AnhNguyenVLU)
+
 ## Danh sách bài thực hành
 
 | Bài | Chủ đề | Nội dung chính |
