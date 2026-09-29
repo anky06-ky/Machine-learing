@@ -9,18 +9,18 @@ Từ thư mục gốc repository, tạo môi trường và cài thư viện:
 ```powershell
 py -m venv .venv
 .\.venv\Scripts\Activate.ps1
-python -m pip install -r .\Buoi02\02_Logistic_Regression\requirements.txt
+python -m pip install -r .\02_Logistic_Regression\requirements.txt
 ```
 
 Chạy từng bài từ thư mục gốc repository:
 
 ```powershell
-python .\Buoi02\02_Logistic_Regression\bai1.py
-python .\Buoi02\02_Logistic_Regression\bai2.py
-python .\Buoi02\02_Logistic_Regression\bai3.py
-python .\Buoi02\02_Logistic_Regression\bai4.py
-python .\Buoi02\02_Logistic_Regression\bai5.py
-python .\Buoi02\02_Logistic_Regression\bai6.py
+python .\02_Logistic_Regression\bai1.py
+python .\02_Logistic_Regression\bai2.py
+python .\02_Logistic_Regression\bai3.py
+python .\02_Logistic_Regression\bai4.py
+python .\02_Logistic_Regression\bai5.py
+python .\02_Logistic_Regression\bai6.py
 ```
 
 Bài 2 lưu đồ thị `sigmoid.png` trong thư mục này. Chụp kết quả terminal và đồ thị để nộp theo yêu cầu giảng viên.

@@ -128,7 +128,7 @@ plt.tight_layout()
 # Tránh tiêu đề hoặc nhãn bị cắt.
 
 
-# Chạy từ thư mục Buoi02 nên ảnh được lưu ngay tại thư mục gốc này.
+# Lưu hình cạnh bộ mã bài tập để vị trí đầu ra không phụ thuộc thư mục chạy.
 output_path = Path(__file__).resolve().parent / "sigmoid.png"
 plt.savefig(output_path, dpi=200)
 # Lưu biểu đồ thành file sigmoid.png.

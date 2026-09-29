@@ -39,7 +39,7 @@ Phần bài tập vận dụng gồm lọc dữ liệu, trực quan hóa giá th
 ## Cấu trúc thư mục
 
 ```text
-bai01_hoi_quy/
+01_Linear_Regression/
 ├── README.md
 ├── Tong_hop_Bai_01_Hoi_quy_tuyen_tinh.ipynb
 ├── Lab01_Hoi_quy_tuyen_tinh.pdf
@@ -68,13 +68,13 @@ python -m pip install numpy pandas matplotlib scikit-learn jupyter
 Mở notebook:
 
 ```bash
-jupyter notebook bai01_hoi_quy/Tong_hop_Bai_01_Hoi_quy_tuyen_tinh.ipynb
+jupyter notebook 01_Linear_Regression/Tong_hop_Bai_01_Hoi_quy_tuyen_tinh.ipynb
 ```
 
 Hoặc chạy từng bước riêng lẻ từ thư mục bài:
 
 ```bash
-cd bai01_hoi_quy
+cd 01_Linear_Regression
 python code/b1_doc_du_lieu.py
 python code/b2_do_sai_so.py
 python code/b3_cong_thuc.py

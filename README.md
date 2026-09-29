@@ -24,7 +24,8 @@ Kho lưu trữ các bài thực hành môn **Học máy ứng dụng**. Nội du
 
 | Bài | Chủ đề | Nội dung chính |
 | --- | --- | --- |
-| [Bài 01](./bai01_hoi_quy/) | Hồi quy tuyến tính | Đọc dữ liệu, tính sai số, bình phương tối thiểu, scikit-learn, đánh giá mô hình, gradient descent và hồi quy nhiều biến |
+| [Bài 01](./01_Linear_Regression/) | Hồi quy tuyến tính | Đọc dữ liệu, tính sai số, bình phương tối thiểu, scikit-learn, đánh giá mô hình, gradient descent và hồi quy nhiều biến |
+| [Bài 02](./02_Logistic_Regression/) | Hồi quy logistic | Sigmoid, phân loại nhị phân, LogisticRegression, ma trận nhầm lẫn, precision/recall, ngưỡng quyết định và nhiều biến |
 
 ## Công nghệ sử dụng
 
@@ -39,13 +40,18 @@ Hướng dẫn cài đặt và chạy chi tiết nằm trong README của từng
 ```text
 Machine-learing/
 ├── README.md
-└── bai01_hoi_quy/
+├── 01_Linear_Regression/
+│   ├── README.md
+│   ├── Tong_hop_Bai_01_Hoi_quy_tuyen_tinh.ipynb
+│   ├── Lab01_Hoi_quy_tuyen_tinh.pdf
+│   ├── code/
+│   ├── data/
+│   └── figures/
+└── 02_Logistic_Regression/
     ├── README.md
-    ├── Tong_hop_Bai_01_Hoi_quy_tuyen_tinh.ipynb
-    ├── Lab01_Hoi_quy_tuyen_tinh.pdf
-    ├── code/
+    ├── bai1.py ... bai6.py
     ├── data/
-    └── figures/
+    └── requirements.txt
 ```
 
 ## Liên kết
