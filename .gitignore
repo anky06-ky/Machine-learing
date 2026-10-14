@@ -13,6 +13,8 @@ venv/
 
 # Generated temporary files
 tmp/
+outputs/
+Buoi02/
 
 # Editors and operating systems
 .vscode/

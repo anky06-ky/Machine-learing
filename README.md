@@ -26,6 +26,7 @@ Kho lưu trữ các bài thực hành môn **Học máy ứng dụng**. Nội du
 | --- | --- | --- |
 | [Bài 01](./01_Linear_Regression/) | Hồi quy tuyến tính | Đọc dữ liệu, tính sai số, bình phương tối thiểu, scikit-learn, đánh giá mô hình, gradient descent và hồi quy nhiều biến |
 | [Bài 02](./02_Logistic_Regression/) | Hồi quy logistic | Sigmoid, phân loại nhị phân, LogisticRegression, ma trận nhầm lẫn, precision/recall, ngưỡng quyết định và nhiều biến |
+| [Bài 03](./03_Naive_Bayes/) | Naive Bayes | Định lý Bayes bằng tay, túi từ (Bag of Words), bộ lọc thư rác MultinomialNB, làm trơn Laplace và GaussianNB |
 
 ## Công nghệ sử dụng
 
@@ -47,9 +48,15 @@ Machine-learing/
 │   ├── code/
 │   ├── data/
 │   └── figures/
-└── 02_Logistic_Regression/
+├── 02_Logistic_Regression/
+│   ├── README.md
+│   ├── bai1.py ... bai6.py
+│   ├── data/
+│   └── requirements.txt
+└── 03_Naive_Bayes/
     ├── README.md
-    ├── bai1.py ... bai6.py
+    ├── Lab03_Naive_Bayes.pdf
+    ├── d1_bayes_tay.py ... d5_gaussian.py
     ├── data/
     └── requirements.txt
 ```
