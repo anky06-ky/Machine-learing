@@ -15,6 +15,7 @@ venv/
 tmp/
 outputs/
 Buoi02/
+/Lab05_CayQuyetDinh/tsst.py
 
 # Editors and operating systems
 .vscode/

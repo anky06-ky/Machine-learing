@@ -28,6 +28,7 @@ Kho lưu trữ các bài thực hành môn **Học máy ứng dụng**. Nội du
 | [Bài 02](./02_Logistic_Regression/) | Hồi quy logistic | Sigmoid, phân loại nhị phân, LogisticRegression, ma trận nhầm lẫn, precision/recall, ngưỡng quyết định và nhiều biến |
 | [Bài 03](./03_Naive_Bayes/) | Naive Bayes | Định lý Bayes bằng tay, túi từ (Bag of Words), bộ lọc thư rác MultinomialNB, làm trơn Laplace và GaussianNB |
 | [Bài 04](./Lab04_KNN/) | K láng giềng gần nhất (KNN) | Khoảng cách Euclid, chuẩn hoá dữ liệu, chọn k bằng kiểm định chéo, so sánh mô hình và hồi quy KNN |
+| [Bài 05](./Lab05_CayQuyetDinh/) | Cây quyết định và rừng ngẫu nhiên | Chỉ số Gini, đọc cây, chọn độ sâu, ảnh hưởng của chuẩn hoá, Random Forest, độ quan trọng đặc trưng và cây hồi quy |
 
 ## Công nghệ sử dụng
 
@@ -60,11 +61,18 @@ Machine-learing/
 │   ├── d1_bayes_tay.py ... d5_gaussian.py
 │   ├── data/
 │   └── requirements.txt
-└── Lab04_KNN/
+├── Lab04_KNN/
+│   ├── README.md
+│   ├── Lab04_KNN.pdf
+│   ├── e1_khoang_cach.py ... e5_knn_hoi_quy.py
+│   ├── code/
+│   ├── data/
+│   └── requirements.txt
+└── Lab05_CayQuyetDinh/
     ├── README.md
-    ├── Lab04_KNN.pdf
-    ├── e1_khoang_cach.py ... e5_knn_hoi_quy.py
-    ├── code/
+    ├── Lab05_CayQuyetDinh_RungNgauNhien.pdf
+    ├── fi_gini.py
+    ├── f2_cay_nam_la.py ... f7_cay_hoi_quy.py
     ├── data/
     └── requirements.txt
 ```
