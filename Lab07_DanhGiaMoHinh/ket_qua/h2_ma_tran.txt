@@ -1,0 +1,13 @@
+Tran An Ky - 2474802010460 | Lab07_DanhGiaMoHinh
+LENH: python code/h2_ma_tran.py
+MA THOAT: 0
+NGUON: xem data/NGUON.md; lab co du lieu mo phong thay the.
+BAN KET XUAT LOG CHAY THUC TE - KHONG PHAI ANH CHUP TERMINAL
+
+Tu dem: TP=15, FP=6, FN=15, TN=264; tong=300
+confusion_matrix:
+ [[264   6]
+ [ 15  15]]
+Thu tu TN, FP, FN, TP: [264   6  15  15]
+Accuracy: 0.9300; so ban bi bao: 21
+Da luu: figures/ma_tran_nham_lan.png

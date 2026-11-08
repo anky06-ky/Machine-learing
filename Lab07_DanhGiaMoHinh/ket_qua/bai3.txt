@@ -1,0 +1,10 @@
+Tran An Ky - 2474802010460 | Lab07_DanhGiaMoHinh
+LENH: python baitap07/bai3.py
+MA THOAT: 0
+NGUON: xem data/NGUON.md; lab co du lieu mo phong thay the.
+BAN KET XUAT LOG CHAY THUC TE - KHONG PHAI ANH CHUP TERMINAL
+
+Nguong lon nhat: 0.1453320871; recall OOF=0.8090
+Test: recall=0.8333, precision=0.3788, F1=0.5208, so ban bi bao=66
+Recall test dat 0.8: True
+Dieu kien 80% tren OOF khong bao dam 80% tren du lieu moi; khong sua nguong theo test.

@@ -1,0 +1,22 @@
+Tran An Ky - 2474802010460 | Lab07_DanhGiaMoHinh
+LENH: python code/h1_do_bua.py
+MA THOAT: 0
+NGUON: xem data/NGUON.md; lab co du lieu mo phong thay the.
+BAN KET XUAT LOG CHAY THUC TE - KHONG PHAI ANH CHUP TERMINAL
+
+Kich thuoc bang: (1200, 5)
+ diem_tb  so_buoi_vang  tin_chi_no  gio_lam_them  bo_hoc
+     6.5             7           0             9       0
+     7.0             3           1            14       0
+     6.1             4           4            15       0
+     5.1             2           1            17       0
+     5.8             4           1            14       0
+So sinh vien moi lop:
+ bo_hoc
+0    1081
+1     119
+Ty le bo hoc: 0.099
+Tap kiem tra: 300 ban, 30 ban bo hoc
+Mo hinh luoi      accuracy 0.9000, tim ra 0 tren 30 ban bo hoc
+Hoi quy logistic  accuracy 0.9300, tim ra 15 tren 30 ban bo hoc
+Nhan xet: accuracy cao chua du; can xem so ban bo hoc duoc tim ra.

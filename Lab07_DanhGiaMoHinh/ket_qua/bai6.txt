@@ -1,0 +1,12 @@
+Tran An Ky - 2474802010460 | Lab07_DanhGiaMoHinh
+LENH: python baitap07/bai6.py
+MA THOAT: 0
+NGUON: xem data/NGUON.md; lab co du lieu mo phong thay the.
+BAN KET XUAT LOG CHAY THUC TE - KHONG PHAI ANH CHUP TERMINAL
+
+Ban dau         MAE=0.2578 ty, RMSE=0.3730 ty, R2=0.9622
+Mot can +5 ty   MAE=0.6745 ty, RMSE=1.5505 ty, R2=0.3475
+Thay doi MAE, RMSE, R2: [ 0.41666667  1.17747486 -0.61476138]
+Tang tuong doi MAE, RMSE (%): [161.63403668 315.64241079]
+RMSE binh phuong sai so truoc khi lay trung binh nen phat nang du doan hong.
+Chi so khong cung thang do: chi so sanh truc tiep MAE va RMSE (ty dong); R2 khong don vi.

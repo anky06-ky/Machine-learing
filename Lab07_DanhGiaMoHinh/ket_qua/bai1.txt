@@ -1,0 +1,10 @@
+Tran An Ky - 2474802010460 | Lab07_DanhGiaMoHinh
+LENH: python baitap07/bai1.py
+MA THOAT: 0
+NGUON: xem data/NGUON.md; lab co du lieu mo phong thay the.
+BAN KET XUAT LOG CHAY THUC TE - KHONG PHAI ANH CHUP TERMINAL
+
+Logistic {'accuracy': 0.93, 'precision': 0.7142857142857143, 'recall': 0.5, 'f1': 0.588235294117647} - khop scikit-learn
+Luoi {'accuracy': 0.9, 'precision': 0.0, 'recall': 0.0, 'f1': 0.0} - khop scikit-learn
+Mo hinh luoi khong bao lop 1: TP+FP=0, precision khong xac dinh.
+Quy uoc tra 0, tuong duong zero_division=0; khong phai precision do duoc.

@@ -1,0 +1,15 @@
+Tran An Ky - 2474802010460 | Lab07_DanhGiaMoHinh
+LENH: python baitap07/bai5.py
+MA THOAT: 0
+NGUON: xem data/NGUON.md; lab co du lieu mo phong thay the.
+BAN KET XUAT LOG CHAY THUC TE - KHONG PHAI ANH CHUP TERMINAL
+
+Mo hinh   class_weight  precision  recall    F1
+Rung     None         0.6154  0.5333  0.5714
+Rung     balanced     0.4651  0.6667  0.5479
+Thay doi precision, recall, F1: [-0.1503, 0.1333, -0.0235]
+SVM      None         0.5833  0.2333  0.3333
+SVM      balanced     0.3171  0.8667  0.4643
+Thay doi precision, recall, F1: [-0.2663, 0.6333, 0.131]
+Thay doi recall nhieu nhat: SVM
+Cac mo hinh phan ung khac nhau; can bang lop khong bao dam F1 tang.

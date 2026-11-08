@@ -1,0 +1,15 @@
+Tran An Ky - 2474802010460 | Lab07_DanhGiaMoHinh
+LENH: python code/h6_can_bang.py
+MA THOAT: 0
+NGUON: xem data/NGUON.md; lab co du lieu mo phong thay the.
+BAN KET XUAT LOG CHAY THUC TE - KHONG PHAI ANH CHUP TERMINAL
+
+Khong stratify, so ban bo hoc tren test: [32, 23, 39, 39, 30, 31, 34, 32, 31, 33]
+CV accuracy  : 0.9233
+CV precision : 0.6708
+CV recall    : 0.4373
+CV f1        : 0.5250
+Tap kiem tra   precision  recall    F1
+None          0.7143    0.5000  0.5882
+balanced      0.3133    0.8667  0.4602
+Can bang lop phat nang hon khi doan sai lop hiem; van phai xem ca precision.
