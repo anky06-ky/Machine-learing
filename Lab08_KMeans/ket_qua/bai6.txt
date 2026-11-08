@@ -1,0 +1,42 @@
+Tran An Ky - 2474802010460 | Lab08_KMeans
+LENH: python baitap08/bai6.py
+MA THOAT: 0
+NGUON: xem data/NGUON.md; lab co du lieu mo phong thay the.
+BAN KET XUAT LOG CHAY THUC TE - KHONG PHAI ANH CHUP TERMINAL
+
+cum          0    1    2   3    4    5    6    7    8    9
+nhan_that
+0          176    0    0   0    0    0    2    0    0    0
+1            0  100    0  54    1    2    0    1    0   24
+2            1    8    3   2   13    0    0    0    2  148
+3            0    7    7   0  154    0    0    2   13    0
+4            0    2   11   3    0    0  165    0    0    0
+5            0    0    0   0    2    1    2  136   41    0
+6            1    3    0   0    0  177    0    0    0    0
+7            0    2  174   2    0    0    0    1    0    0
+8            0  100    5   6    2    2    0    4   52    3
+9            0    1    8  20    6    0    0    6  139    0
+Ty le nam trong cum dong nhat cua moi chu so:
+ nhan_that
+0    0.9888
+1    0.5495
+2    0.8362
+3    0.8415
+4    0.9116
+5    0.7473
+6    0.9779
+7    0.9721
+8    0.5747
+9    0.7722
+Gom gon nhat: [0]
+Cum 0: hai chu so dong nhat {0: 176, 2: 1}
+Cum 1: hai chu so dong nhat {1: 100, 8: 100}
+Cum 2: hai chu so dong nhat {7: 174, 4: 11}
+Cum 3: hai chu so dong nhat {1: 54, 9: 20}
+Cum 4: hai chu so dong nhat {3: 154, 2: 13}
+Cum 5: hai chu so dong nhat {6: 177, 1: 2}
+Cum 6: hai chu so dong nhat {4: 165, 0: 2}
+Cum 7: hai chu so dong nhat {5: 136, 9: 6}
+Cum 8: hai chu so dong nhat {9: 139, 8: 52}
+Cum 9: hai chu so dong nhat {2: 148, 1: 24}
+Nhom hinh dang giong nhau co the bi gom chung; cum khong duoc danh so theo chu so.

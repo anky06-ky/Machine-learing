@@ -1,0 +1,14 @@
+Tran An Ky - 2474802010460 | Lab08_KMeans
+LENH: python baitap08/bai1.py
+MA THOAT: 0
+NGUON: xem data/NGUON.md; lab co du lieu mo phong thay the.
+BAN KET XUAT LOG CHAY THUC TE - KHONG PHAI ANH CHUP TERMINAL
+
+Tu tinh trung binh=0.7063508042; sklearn=0.7063508042
+Khach co s nho nhat: index=132 (dong CSV=134), cum=2
+tuoi             41.0
+thu_nhap         24.6
+diem_chi_tieu    57.0
+a, b, s: [0.87907684 1.02706936 0.14409204]
+Da luu: figures/silhouette_khach_yeu_nhat.png
+Khach s thap nam gan ranh gioi, hoac xa nhom cua minh so voi nhom ben canh; xem dau sao.
