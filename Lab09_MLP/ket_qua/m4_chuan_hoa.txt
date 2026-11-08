@@ -1,0 +1,11 @@
+Tran An Ky - 2474802010460 | Lab09_MLP
+LENH: python code/m4_chuan_hoa.py
+MA THOAT: 0
+NGUON: xem data/NGUON.md; lab co du lieu mo phong thay the.
+BAN KET XUAT LOG CHAY THUC TE - KHONG PHAI ANH CHUP TERMINAL
+
+Doan ca lop qua: 0.6000
+Khong chuan hoa: 0.4000
+Co chuan hoa: 0.9000
+Khong chuan hoa, so ban doan qua: 0 tren 30
+Cot chi tieu thang do lon chi phoi toi uu; scaler chi fit tren tap hoc trong pipeline.

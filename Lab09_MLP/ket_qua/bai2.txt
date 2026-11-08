@@ -1,0 +1,13 @@
+Tran An Ky - 2474802010460 | Lab09_MLP
+LENH: python baitap09/bai2.py
+MA THOAT: 0
+NGUON: xem data/NGUON.md; lab co du lieu mo phong thay the.
+BAN KET XUAT LOG CHAY THUC TE - KHONG PHAI ANH CHUP TERMINAL
+
+x1 x2 h1 h2 y
+[[0 0 0 0 0]
+ [0 1 0 1 1]
+ [1 0 1 0 1]
+ [1 1 0 0 0]]
+h1+h2 = |x1-x2|: hai bit giong nhau cho 0, khac nhau cho 1, dung bang XOR.
+Khong co ReLU, (x1-x2)+(x2-x1) luon bang 0; phi tuyen la phan quyet dinh.

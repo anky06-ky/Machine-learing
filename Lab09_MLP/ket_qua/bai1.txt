@@ -1,0 +1,15 @@
+Tran An Ky - 2474802010460 | Lab09_MLP
+LENH: python baitap09/bai1.py
+MA THOAT: 0
+NGUON: xem data/NGUON.md; lab co du lieu mo phong thay the.
+BAN KET XUAT LOG CHAY THUC TE - KHONG PHAI ANH CHUP TERMINAL
+
+H = ReLU(X @ W1 + b1), p = sigmoid(H @ W2 + b2)
+Shape X, W1, W2: (5, 2) (2, 8) (8, 1)
+Diem 0: numpy=0.025967627941, sklearn=0.025967627941, lech=0.000e+00
+Diem 1: numpy=0.653237727516, sklearn=0.653237727516, lech=0.000e+00
+Diem 2: numpy=0.026270486112, sklearn=0.026270486112, lech=0.000e+00
+Diem 3: numpy=0.031952827233, sklearn=0.031952827233, lech=0.000e+00
+Diem 4: numpy=0.969594806683, sklearn=0.969594806683, lech=0.000e+00
+Khop toi sai so so thuc; cot thu hai la xac suat lop 1
+Moi cot W1 la trong so cua mot no-ron an; bias duoc cong theo tung cot.

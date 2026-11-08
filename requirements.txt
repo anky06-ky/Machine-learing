@@ -1,0 +1,4 @@
+# Môi trường chung cho Lab07, Lab08, Lab09.
+-r Lab07_DanhGiaMoHinh/requirements.txt
+-r Lab08_KMeans/requirements.txt
+-r Lab09_MLP/requirements.txt

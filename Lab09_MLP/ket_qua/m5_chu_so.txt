@@ -1,0 +1,24 @@
+Tran An Ky - 2474802010460 | Lab09_MLP
+LENH: python code/m5_chu_so.py
+MA THOAT: 0
+NGUON: xem data/NGUON.md; lab co du lieu mo phong thay the.
+BAN KET XUAT LOG CHAY THUC TE - KHONG PHAI ANH CHUP TERMINAL
+
+Kich thuoc ma tran trong so: [(64, 100), (100, 10)]
+Tong so tham so: 7510
+So vong hoc: 144; loss vong 1=2.5206, vong 10=0.4448, cuoi=0.0052
+MLP test accuracy=0.9844; sai 7/450
+anh   6: that=9, doan=3
+anh  61: that=5, doan=7
+anh  77: that=2, doan=1
+anh  85: that=9, doan=7
+anh 276: that=8, doan=2
+anh 428: that=7, doan=9
+anh 443: that=4, doan=7
+Dung som: 44 vong, test=0.9578
+Logistic: 0.9711
+KNN k=5: 0.9867
+SVM RBF: 0.9911
+Da luu: figures/chu_so_loss_dung_som.png
+Da luu: figures/chu_so_doan_sai.png
+Dung som co the dung qua som; MLP khong luon thang KNN hay SVM tren bo du lieu nho.

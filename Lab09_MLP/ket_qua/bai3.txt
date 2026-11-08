@@ -1,0 +1,12 @@
+Tran An Ky - 2474802010460 | Lab09_MLP
+LENH: python baitap09/bai3.py
+MA THOAT: 0
+NGUON: xem data/NGUON.md; lab co du lieu mo phong thay the.
+BAN KET XUAT LOG CHAY THUC TE - KHONG PHAI ANH CHUP TERMINAL
+
+Activation    tap hoc   tap kiem tra
+logistic      0.8333         0.8200
+tanh          0.8333         0.8200
+relu          0.9667         0.9800
+Cao nhat tren test minh hoa: ['relu']
+Ket luan chi cho bo du lieu va seed nay; de chon activation cho trien khai can CV tren tap hoc.
