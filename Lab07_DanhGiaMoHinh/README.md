@@ -1,6 +1,6 @@
 # Bài 07: Đánh giá mô hình
 
-Sáu bài tập trong `Lab07_DanhGiaMoHinh.pdf`. Mỗi file chạy độc lập, đọc dữ liệu theo vị trí file như Lab02. Chú thích có dấu; terminal in không dấu.
+Sáu bài tập trong `Lab07_DanhGiaMoHinh.pdf`.
 
 ## Cài đặt và chạy
 
@@ -23,10 +23,10 @@ Nếu venv đã có thì dùng lại, bỏ lệnh tạo. Chụp kết quả term
 ## Dữ liệu
 
 - `data/sinh_vien_bo_hoc.csv`: dữ liệu **mô phỏng thay thế**, seed 7, 1.200 sinh viên, 119 nhãn bỏ học; chưa có CSV gốc của đề.
-- `data/gia_nha.csv`: dữ liệu Lab01, cùng nội dung file giá nhà bạn bổ sung.
+- `data/gia_nha.csv`: dữ liệu giá nhà từ Lab01.
 - Bài 2 dùng bộ chữ số có sẵn `load_digits`.
 
-[Bài06 của giảng viên](https://github.com/AnhNguyenVLU/Machine_Learning_VLU/blob/4461e7ff473f7d34a6a2f2ec2473f808012a4972/06.%20SVM/SVM.ipynb) dùng blobs, hai vầng trăng và Iris, không chứa CSV sinh viên bỏ học. Các kết quả dưới đây đo trên dữ liệu đi kèm, có thể khác PDF.
+Các kết quả dưới đây đo trên dữ liệu đi kèm, có thể khác PDF.
 
 ## Bài 1: tự viết hàm đánh giá
 

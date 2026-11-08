@@ -1,6 +1,6 @@
 # Bài 09: Mạng nơ-ron nhiều lớp
 
-Sáu bài tập trong `Lab09_MLP.pdf`. Mỗi file chạy độc lập, dùng đường dẫn theo vị trí file; không cần runner hay file dùng chung.
+Sáu bài tập trong `Lab09_MLP.pdf`.
 
 ## Cài đặt và chạy
 

@@ -1,6 +1,6 @@
 # Bài 08: Phân cụm K-Means
 
-Sáu bài tập trong `Lab08_KMeans.pdf`. Mỗi bài chạy độc lập; CSV nằm trong `data/`, đồ thị được lưu ngay trong thư mục lab như Lab02.
+Sáu bài tập trong `Lab08_KMeans.pdf`.
 
 ## Cài đặt và chạy
 

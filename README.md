@@ -29,8 +29,6 @@ Kho bài thực hành môn **Học máy ứng dụng**, tổ chức theo từng 
 - [Bài 08: Phân cụm K-Means](./Lab08_KMeans/).
 - [Bài 09: Mạng nơ-ron nhiều lớp](./Lab09_MLP/).
 
-Lab07–09 có cấu trúc giống Lab02: `bai1.py`–`bai6.py` chạy độc lập, thư mục `data/`, PDF đề bài, README và `requirements.txt`. Đồ thị được tạo ngay trong thư mục lab khi chạy bài tương ứng.
-
 ## Cài đặt và chạy
 
 ```powershell
