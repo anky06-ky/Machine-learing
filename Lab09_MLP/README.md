@@ -1,60 +1,65 @@
-# Lab09: Mạng nơ-ron nhiều lớp (MLP)
+# Bài 09: Mạng nơ-ron nhiều lớp
 
-**Sinh viên:** Trần An Kỳ - **MSSV:** 2474802010460. Môn Học máy ứng dụng, LHP 261_71ITAI41203_0101, năm 3 khóa 30.
-
-Hoàn thành 5 chương trình mẫu và 6 bài tập trong `Lab09_MLP.pdf`.
-
-## Dữ liệu và giới hạn tái lập
-
-- `data/xor.csv`: **bản mô phỏng thay thế**, 400 điểm, seed 9, 24 điểm đảo nhãn, tạo từ `tao_du_lieu.py`. Lớp 1 ở hai góc cùng dấu như mô tả trong đề; các mạng Boolean 0/1 của m1 và bài 2 tính XOR đúng bảng `[0,1,1,0]` riêng. Chưa có CSV gốc nên không ép accuracy khớp PDF.
-- `data/hai_vang_trang.csv`: tái tạo đúng dữ liệu [Bài06 trên repo giảng viên](https://github.com/AnhNguyenVLU/Machine_Learning_VLU/blob/4461e7ff473f7d34a6a2f2ec2473f808012a4972/06.%20SVM/SVM.ipynb), `make_moons(n_samples=200, noise=0.2, random_state=42)`. Có `lay_du_lieu_bai06.py` để tái lập.
-- `data/sinh_vien_mo_rong.csv`: sao chép nguyên Lab04. Chi tiết nguồn tất cả file: [data/NGUON.md](./data/NGUON.md).
-- `data/gia_nha.csv`: sao chép nguyên từ Lab01; trùng file giá nhà bạn bổ sung tại thư mục gốc.
-- `load_digits`: ảnh chữ số 8x8 có sẵn trong scikit-learn, không cần tải dữ liệu.
+Sáu bài tập trong `Lab09_MLP.pdf`. Mỗi file chạy độc lập, dùng đường dẫn theo vị trí file; không cần runner hay file dùng chung.
 
 ## Cài đặt và chạy
 
-Từ thư mục gốc repository trong PowerShell:
+Từ thư mục gốc repository:
 
 ```powershell
-python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r .\Lab09_MLP\requirements.txt
-.\.venv\Scripts\python.exe .\Lab09_MLP\chay_tat_ca.py
+py -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r .\Lab09_MLP\requirements.txt
+python .\Lab09_MLP\bai1.py
+python .\Lab09_MLP\bai2.py
+python .\Lab09_MLP\bai3.py
+python .\Lab09_MLP\bai4.py
+python .\Lab09_MLP\bai5.py
+python .\Lab09_MLP\bai6.py
 ```
 
-Bỏ lệnh tạo nếu `.venv` đã có. Đã kiểm tra với Python 3.14.8; dùng đúng phiên bản trong `requirements.txt` để dễ đối chiếu. `.venv/` không được Git theo dõi. Runner giới hạn thư viện số học còn một luồng để tránh chi phí chia luồng trên mạng nhỏ; vẫn thử đủ lưới và 5 fold.
+Nếu venv đã có thì dùng lại. Chụp kết quả terminal và đồ thị để nộp. Dò lưới bài 5 chạy lâu hơn các bài khác.
 
-## Năm chương trình thực hành
+## Dữ liệu
 
-1. `code/m1_lan_truyen_tien.py`: một nơ-ron z=1.8, sigmoid; tự đặt hai ReLU giải bảng XOR bằng phép nhân ma trận.
-2. `code/m2_xor.py`: logistic và MLP 1/2/4/8 nơ-ron ẩn, solver lbfgs, max_iter=5000; in số tham số, accuracy học/test.
-3. `code/m3_do_lon_mang.py`: mạng (2,), (100,100) với alpha nhỏ/lớn; thử đủ alpha 1e-5, 1e-3, 0.1, 1, 3, 10 bằng CV 5 phần trên tập học, max_iter=20000.
-4. `code/m4_chuan_hoa.py`: mạng (20,), Adam, max_iter=3000 có/không StandardScaler trên sinh viên mở rộng; in số bạn được đoán qua môn.
-5. `code/m5_chu_so.py`: mạng (100,), Adam, max_iter=1000; đọc shape trọng số, xác nhận 7.510 tham số, loss và số vòng. So early stopping và logistic/KNN/SVM trên cùng cách chia; lưu đường loss/validation và ảnh đoán sai.
+- `data/xor.csv`: **mô phỏng thay thế**, seed 9, 400 điểm, 24 điểm đảo nhãn; chưa có CSV gốc của PDF. Lớp 1 nằm ở hai góc cùng dấu như mô tả dữ liệu trong đề.
+- `data/hai_vang_trang.csv`: đúng `make_moons(n_samples=200, noise=0.2, random_state=42)` từ [Bài06 của giảng viên](https://github.com/AnhNguyenVLU/Machine_Learning_VLU/blob/4461e7ff473f7d34a6a2f2ec2473f808012a4972/06.%20SVM/SVM.ipynb).
+- `data/gia_nha.csv`: dữ liệu Lab01. Bộ chữ số dùng `load_digits` có sẵn trong sklearn.
 
-## Sáu bài tập và giải thích
+Kết quả dưới đây dựa trên dữ liệu đi kèm, có thể khác số mẫu trong PDF.
 
-1. `baitap09/bai1.py`: học lại mạng XOR 8 nơ-ron; tính `H=ReLU(X@W1+b1)`, `p=sigmoid(H@W2+b2)` cho 5 điểm test. So với cột xác suất lớp 1 bằng `assert_allclose` tới sai số 1e-12. Mỗi cột W1 là trọng số một nơ-ron; bias cộng theo cột.
-2. `baitap09/bai2.py`: h1=max(0,x1-x2), h2=max(0,x2-x1), y=h1+h2=|x1-x2|. Hai bit bằng nhau cho 0; khác nhau cho 1. Bỏ ReLU thì hai hiệu triệt tiêu và mạng luôn trả 0.
-3. `baitap09/bai3.py`: so logistic/tanh/relu, mạng (100,100), alpha=1, solver lbfgs, in accuracy học/test và tên hàm cao nhất. Kết luận chỉ cho phép thử này; muốn chọn mô hình triển khai phải dùng CV.
-4. `baitap09/bai4.py`: tốc độ 0.0001/0.001/0.01/0.1, in n_iter_, loss cuối, test accuracy; lưu đủ bốn đường trong `figures/toc_do_hoc.png`. Tốc độ nhỏ học chậm; quá lớn có thể dao động, phải nhìn đường loss thực tế.
-5. `baitap09/bai5.py`: GridSearchCV đủ 12 cặp kiến trúc (10,), (50,), (100,), (50,50) và alpha 0.0001/0.01/1, CV=5 trên tập học; scaler trong pipeline mỗi fold. In cặp tốt nhất, test accuracy và so với SVM RBF; lưu toàn bộ `ket_qua/grid_search.csv`.
-6. `baitap09/bai6.py`: MLPRegressor (20,), max_iter=5000, có chuẩn hoá; so MAE với LinearRegression cùng một cột diện tích, dự đoán 250m² và vẽ tới miền đó. Ngoài miền học không có nhãn thật để kết luận bên nào chính xác; MLP ReLU không bị ràng buộc giữ xu hướng tuyến tính.
+## Bài 1: tự lan truyền tiến
 
-Phân loại chia 75/25, seed 17, phân tầng; giá nhà chia 80/20, seed 42. Mọi MLP dùng seed 0. Các bảng test khảo sát theo đề chỉ dùng minh hoạ; lựa chọn alpha/lưới dựa trên CV tập học. [API MLPClassifier và các thuộc tính](https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html).
+Học MLP 8 nơ-ron ẩn rồi lấy `coefs_`, `intercepts_`. Tự tính `H=ReLU(X@W1+b1)`, `p=sigmoid(H@W2+b2)` cho 5 điểm test, đối chiếu với cột xác suất lớp 1.
 
-## Chạy riêng và xem kết quả
+Hai kết quả khớp tới sai số **1e-12**. Mỗi cột W1 là trọng số của một nơ-ron ẩn, bias được cộng theo cột.
 
-```powershell
-.\.venv\Scripts\python.exe .\Lab09_MLP\code\m1_lan_truyen_tien.py
-.\.venv\Scripts\python.exe .\Lab09_MLP\baitap09\bai1.py
-.\.venv\Scripts\python.exe .\Lab09_MLP\chay_tat_ca.py --chi bai4 bai5
-```
+## Bài 2: mạng XOR khác
 
-- `ket_qua/*.txt`: đầu ra và cảnh báo thật từng chương trình.
-- `ket_qua/*.png`: ảnh **kết xuất log, không phải ảnh chụp terminal**. Chạy từng bài rồi chụp terminal khi giảng viên yêu cầu đúng ảnh chụp màn hình.
-- `ket_qua/tong_hop.json`: mã thoát, thời gian và cờ có stderr của lần chạy gần nhất của từng bài; `--chi` giữ kết quả các bài khác.
-- `figures/`: loss, ảnh chữ số sai, tốc độ học và ngoại suy hồi quy.
-- [Kết quả chạy](./KET_QUA.md): số liệu đo từ lần chạy thực tế.
+`h1=max(0,x1-x2)`, `h2=max(0,x2-x1)`, `y=h1+h2=|x1-x2|`. Trên bốn đầu vào Boolean, kết quả là **[0, 1, 1, 0]**: hai bit giống nhau cho 0, khác nhau cho 1.
 
-`ConvergenceWarning` nghĩa là bộ tối ưu chưa đạt điều kiện dừng trong giới hạn vòng/số lần tính hàm, không phải crash; runner lưu nguyên cảnh báo để kiểm tra. Mạng lớn và dò lưới có thể mất vài phút. Nếu thay dữ liệu XOR gốc, chạy lại runner; kết quả có thể đổi theo dữ liệu, thư viện và bộ tối ưu.
+Nếu bỏ ReLU, hai hiệu triệt tiêu và đầu ra luôn bằng 0.
+
+## Bài 3: so hàm kích hoạt
+
+Cùng mạng (100,100), alpha=1, solver lbfgs. Accuracy test: logistic **0.8200**, tanh **0.8200**, ReLU **0.9800**. ReLU cao nhất trong phép thử này; muốn chọn hàm cho triển khai phải dùng CV trên tập học.
+
+## Bài 4: tốc độ học
+
+Với tốc độ **0.0001 / 0.001 / 0.01 / 0.1**, mạng học **582 / 144 / 38 / 30** vòng, accuracy test **0.9889 / 0.9844 / 0.9778 / 0.9489**. Lưu đủ bốn đường mất mát trong `toc_do_hoc.png`.
+
+Tốc độ nhỏ học chậm; quá lớn có thể làm loss dao động và giảm độ chính xác.
+
+## Bài 5: GridSearchCV
+
+Thử 4 kiến trúc × 3 alpha, CV 5-fold. Cặp tốt nhất là **(50,), alpha=1**, accuracy CV **0.9785**, test **0.9822**. SVM RBF trên cùng test đạt **0.9911**, cao hơn MLP trong phép thử này.
+
+Scaler nằm trong pipeline nên mỗi fold chỉ chuẩn hoá từ phần huấn luyện của fold.
+
+## Bài 6: MLP cho hồi quy
+
+MLPRegressor (20,), max_iter=5000, có chuẩn hoá đạt MAE **0.5008 tỷ**; hồi quy tuyến tính đạt **0.2578 tỷ**. Dự đoán căn 250m² lần lượt **28.1758** và **19.9139 tỷ**.
+
+250m² nằm ngoài miền học 37.6–117.5m² nên là ngoại suy; chưa có giá thật để khẳng định mô hình nào đúng. Lưu `mlp_hoi_quy_ngoai_suy.png` để so hai đường dự đoán.
+
+Phân loại chia 75/25, seed 17, phân tầng; giá nhà chia 80/20, seed 42. MLP dùng seed 0. Kết quả có thể thay đổi theo phiên bản thư viện.

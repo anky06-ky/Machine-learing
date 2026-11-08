@@ -1,65 +1,59 @@
-# Lab07: Đánh giá mô hình
+# Bài 07: Đánh giá mô hình
 
-**Sinh viên:** Trần An Kỳ - **MSSV:** 2474802010460. Môn Học máy ứng dụng, LHP 261_71ITAI41203_0101, năm 3 khóa 30.
+Sáu bài tập trong `Lab07_DanhGiaMoHinh.pdf`. Mỗi file chạy độc lập, đọc dữ liệu theo vị trí file như Lab02. Chú thích có dấu; terminal in không dấu.
 
-Triển khai các mục 2-7 và đủ 6 bài tập mục 8 của `Lab07_DanhGiaMoHinh.pdf`. Chú thích có dấu; phần in kết quả không dấu theo quy ước của đề.
+## Cài đặt và chạy
 
-## Dữ liệu và nguồn
-
-- `data/sinh_vien_bo_hoc.csv`: **bản mô phỏng thay thế**, tạo bằng `tao_du_lieu.py`, seed 7, 1.200 dòng, 119 nhãn bỏ học. Chưa có CSV gốc của giảng viên; không coi dữ liệu hoặc kết quả này là bản gốc trong PDF.
-- Các cột: `diem_tb`, `so_buoi_vang`, `tin_chi_no`, `gio_lam_them`, nhãn `bo_hoc` (1 = bỏ học).
-- `data/gia_nha.csv`: sao chép nguyên dữ liệu Lab01; trùng nội dung file `gia_nha.csv` bạn bổ sung ở thư mục gốc.
-- Thay CSV bằng dữ liệu gốc cùng tên/cột, chạy lại để cập nhật kết quả. Không cần và không nên sửa mô hình để ép khớp các con số mẫu trong PDF.
-- Đã kiểm tra repo giảng viên theo yêu cầu lấy dữ liệu từ Bài06: notebook SVM dùng blobs/moons/Iris và không có CSV sinh viên bỏ học. [Chi tiết nguồn](./data/NGUON.md).
-
-## Cài môi trường
-
-Từ thư mục gốc repository, trong PowerShell:
+Từ thư mục gốc repository:
 
 ```powershell
-python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r .\Lab07_DanhGiaMoHinh\requirements.txt
-.\.venv\Scripts\python.exe .\Lab07_DanhGiaMoHinh\chay_tat_ca.py
+py -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r .\Lab07_DanhGiaMoHinh\requirements.txt
+python .\Lab07_DanhGiaMoHinh\bai1.py
+python .\Lab07_DanhGiaMoHinh\bai2.py
+python .\Lab07_DanhGiaMoHinh\bai3.py
+python .\Lab07_DanhGiaMoHinh\bai4.py
+python .\Lab07_DanhGiaMoHinh\bai5.py
+python .\Lab07_DanhGiaMoHinh\bai6.py
 ```
 
-Nếu `.venv` đã tồn tại thì dùng luôn, bỏ lệnh tạo. Có thể chạy trực tiếp Python trong venv, không cần thay ExecutionPolicy. Đã kiểm tra với Python 3.14.8; phiên bản thư viện được cố định trong `requirements.txt`. `.venv/` được Git bỏ qua.
+Nếu venv đã có thì dùng lại, bỏ lệnh tạo. Chụp kết quả terminal và đồ thị để nộp theo yêu cầu giảng viên.
 
-## Thực hành theo đúng thứ tự PDF
+## Dữ liệu
 
-1. `code/h1_do_bua.py`: đọc dữ liệu, đếm lớp, DummyClassifier và logistic.
-2. `code/h2_ma_tran.py`: tự đếm TP/FP/FN/TN, kiểm tra khớp sklearn; lưu hình ma trận.
-3. `code/h3_precision_recall.py`: tính tay precision, recall, F1 và classification_report.
-4. `code/h4_nguong.py`: các ngưỡng 0.5, 0.4, 0.3, 0.2, 0.1; chọn F1 từ xác suất OOF 5-fold trên tập học, lưới 0.05-0.95, bước 0.05.
-5. `code/h5_roc_auc.py`: ROC logistic và so AUC/recall/F1 của logistic, GaussianNB, KNN 15, cây sâu 4, rừng 200 cây, SVM RBF.
-6. `code/h6_can_bang.py`: 10 cách chia không phân tầng, CV accuracy/precision/recall/F1 và logistic cân bằng lớp.
+- `data/sinh_vien_bo_hoc.csv`: dữ liệu **mô phỏng thay thế**, seed 7, 1.200 sinh viên, 119 nhãn bỏ học; chưa có CSV gốc của đề.
+- `data/gia_nha.csv`: dữ liệu Lab01, cùng nội dung file giá nhà bạn bổ sung.
+- Bài 2 dùng bộ chữ số có sẵn `load_digits`.
 
-## Bài tập và nhận xét
+[Bài06 của giảng viên](https://github.com/AnhNguyenVLU/Machine_Learning_VLU/blob/4461e7ff473f7d34a6a2f2ec2473f808012a4972/06.%20SVM/SVM.ipynb) dùng blobs, hai vầng trăng và Iris, không chứa CSV sinh viên bỏ học. Các kết quả dưới đây đo trên dữ liệu đi kèm, có thể khác PDF.
 
-1. `baitap07/bai1.py`: `danh_gia(y_that, y_doan)` chỉ dùng NumPy. Tự kiểm tra với sklearn cho logistic và mô hình lười. Khi TP+FP=0, precision không xác định; quy ước trả 0 tương đương `zero_division=0`.
-2. `baitap07/bai2.py`: SVM RBF trên `load_digits`, report 10 chữ số, tự tìm tất cả lớp có precision/recall thấp nhất. Support gần cân bằng nên macro và weighted gần bằng nhau.
-3. `baitap07/bai3.py`: ngưỡng **lớn nhất chính xác** để recall OOF >= 0.8 là điểm xác suất của mẫu dương thứ `ceil(0.8*n_duong)` khi sắp giảm dần. Đánh giá test một lần; yêu cầu OOF không bảo đảm recall 0.8 trên dữ liệu mới.
-4. `baitap07/bai4.py`: lưu `figures/roc.png`, so AUC và kiểm tra hai ROC có đổi thứ tự cao/thấp trên các FPR chung.
-5. `baitap07/bai5.py`: rừng và SVC trước/sau cân bằng; in precision, recall, F1, độ thay đổi và mô hình đổi recall nhiều nhất.
-6. `baitap07/bai6.py`: MAE/RMSE/R² trước và sau khi cộng đúng một dự đoán thêm 5 tỷ. In cả chênh lệch và mức tăng tương đối MAE/RMSE; RMSE phạt mạnh lỗi lớn do bình phương sai số. R² không có cùng đơn vị để so mức đổi trực tiếp với MAE/RMSE.
+## Bài 1: tự viết hàm đánh giá
 
-Phân loại: 75% học/25% test, `random_state=17`, `stratify=y`. Giá nhà: 80% học/20% test, `random_state=42`, dùng một cột diện tích như Lab01. Scaler luôn nằm trong pipeline và chỉ học từ tập huấn luyện. Những bảng so nhiều mô hình/ngưỡng trên test là minh hoạ theo đề, không dùng làm tiêu chí chọn mô hình triển khai. [Tài liệu sklearn về chọn ngưỡng](https://scikit-learn.org/stable/modules/classification_threshold.html).
+`danh_gia(y_that, y_doan)` dùng NumPy tính accuracy, precision, recall, F1 và kiểm tra khớp scikit-learn. Logistic đạt **0.9300 / 0.7143 / 0.5000 / 0.5882**; mô hình lười đạt **0.9000 / 0 / 0 / 0**.
 
-## Chạy riêng và xem kết quả
+Mô hình lười không báo lớp 1 nên TP+FP=0, precision không xác định. Hàm quy ước trả 0, giống `zero_division=0`.
 
-```powershell
-.\.venv\Scripts\python.exe .\Lab07_DanhGiaMoHinh\code\h1_do_bua.py
-.\.venv\Scripts\python.exe .\Lab07_DanhGiaMoHinh\baitap07\bai3.py
-.\.venv\Scripts\python.exe .\Lab07_DanhGiaMoHinh\chay_tat_ca.py --chi bai1 bai3
-```
+## Bài 2: đánh giá chữ số viết tay
 
-Các lệnh hoạt động cả từ thư mục repository lẫn thư mục lab nhờ đường dẫn theo `__file__`.
+SVM RBF đạt accuracy **0.9911** trên 450 ảnh. Chữ số **8** có precision và recall thấp nhất, đều **0.9767**. Macro và weighted gần bằng nhau vì support các chữ số gần cân bằng.
 
-- `ket_qua/*.txt`: stdout/stderr của từng lần chạy thực tế.
-- `ket_qua/*.png`: bản kết xuất log thành ảnh để đọc/xem kết quả; **không phải ảnh chụp terminal**. Nếu giảng viên yêu cầu ảnh chụp terminal, mở terminal chạy từng bài rồi chụp màn hình khi nộp.
-- `ket_qua/tong_hop.json`: mã thoát và thời gian của lần chạy gần nhất của từng chương trình; `--chi` giữ lại thông tin các bài khác.
-- `figures/`: ma trận nhầm lẫn, F1 OOF theo ngưỡng, ROC.
-- [Kết quả chạy](./KET_QUA.md): các giá trị đo trên dữ liệu đi kèm.
+## Bài 3: chọn ngưỡng đạt recall 80%
 
-scikit-learn 1.9.1 báo `FutureWarning` cho `SVC(probability=True)` trong h5. Tham số này được giữ đúng ví dụ PDF và vẫn chạy được trong phiên bản đã cố định; cảnh báo được lưu nguyên trong log.
+Chỉ dùng xác suất OOF 5-fold trên tập học. Ngưỡng lớn nhất là **0.1453320871**, recall OOF **0.8090**. Trên test: recall **0.8333**, precision **0.3788**, báo **66** sinh viên.
 
-Không chạy `tao_du_lieu.py --ghi-de` sau khi đã thay bằng dữ liệu gốc: lệnh này cố ý ghi lại bản mô phỏng.
+Ngưỡng là xác suất của mẫu dương thứ `ceil(0.8*n_duong)` khi sắp giảm dần. Đạt 80% trên OOF không bảo đảm 80% trên dữ liệu mới; không sửa ngưỡng theo test.
+
+## Bài 4: vẽ ROC
+
+Lưu `roc.png` ngay trong thư mục lab. AUC logistic **0.9154**, rừng **0.8825**; hai đường có đổi thứ tự cao/thấp. AUC lớn hơn cho thấy khả năng xếp hạng tổng thể tốt hơn, không bảo đảm tốt hơn tại mọi ngưỡng.
+
+## Bài 5: cân bằng lớp
+
+Recall của rừng tăng **0.5333 → 0.6667**, SVM tăng **0.2333 → 0.8667**. SVM thay đổi recall nhiều nhất. Precision giảm ở cả hai; cân bằng lớp không bảo đảm F1 tăng.
+
+## Bài 6: một dự đoán sai lớn
+
+Cộng 5 tỷ vào đúng một dự đoán: MAE tăng **0.2578 → 0.6745 tỷ**, RMSE **0.3730 → 1.5505 tỷ**, R² giảm **0.9622 → 0.3475**. RMSE tăng mạnh hơn MAE vì bình phương sai số trước khi lấy trung bình. R² không cùng đơn vị để so mức thay đổi trực tiếp với hai độ đo còn lại.
+
+Phân loại chia 75/25, seed 17, phân tầng; hồi quy chia 80/20, seed 42. Scaler nằm trong pipeline để tránh rò rỉ dữ liệu.
