@@ -38,8 +38,4 @@ python -m pip install -r .\Lab07_DanhGiaMoHinh\requirements.txt
 python .\Lab07_DanhGiaMoHinh\bai1.py
 ```
 
-Lab07–09 dùng chung NumPy, pandas, Matplotlib và scikit-learn. Nếu `.venv` đã có thì dùng lại. Đổi tên lab và số bài để chạy bài khác; hướng dẫn đầy đủ nằm trong README từng lab. Không đưa venv, cache hay đồ thị sinh tự động lên Git.
-
-**Nguồn dữ liệu:** bộ hai vầng trăng của Lab08/09 dùng đúng cấu hình [Bài06 của giảng viên](https://github.com/AnhNguyenVLU/Machine_Learning_VLU/blob/4461e7ff473f7d34a6a2f2ec2473f808012a4972/06.%20SVM/SVM.ipynb): 200 mẫu, noise=0.2, seed 42. Giá nhà dùng dữ liệu Lab01. Ba CSV sinh viên bỏ học, khách hàng và XOR hiện là **dữ liệu mô phỏng thay thế**, có ghi rõ trong README; kết quả có thể khác PDF. Bài 4 Lab08 nhận ảnh cá nhân qua `--anh`.
-
 Kho lưu trữ: [anky06-ky/Machine-learing](https://github.com/anky06-ky/Machine-learing).
