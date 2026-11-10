@@ -25,6 +25,7 @@ Kho bài thực hành môn **Học máy ứng dụng**, tổ chức theo từng 
 - [Bài 03: Naive Bayes](./03_Naive_Bayes/).
 - [Bài 04: K láng giềng gần nhất](./Lab04_KNN/).
 - [Bài 05: Cây quyết định và rừng ngẫu nhiên](./Lab05_CayQuyetDinh/).
+- [Bài 06: Máy vectơ hỗ trợ (SVM)](./Lab06_SVM/).
 - [Bài 07: Đánh giá mô hình](./Lab07_DanhGiaMoHinh/).
 - [Bài 08: Phân cụm K-Means](./Lab08_KMeans/).
 - [Bài 09: Mạng nơ-ron nhiều lớp](./Lab09_MLP/).
